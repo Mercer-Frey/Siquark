@@ -1,0 +1,208 @@
+#menu-content{
+  box-sizing: border-box;
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100vh;
+  padding: 6.25rem 0 6.25rem 6.25rem;
+  transition: all .4s;
+  transform: scaleX(0);
+  transform-origin: left;
+  opacity: 0;
+  margin: 0;
+  @media screen and (max-width: $tableWidth) {
+    padding: 1rem 0 3.25rem 6.25rem;
+    height: 105vh;
+  }
+  .menu-container{
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    padding-left: 15%;
+    .menu-nav{
+      width: 1.25rem;
+      .nav-item{
+        font-size: 2.375rem;
+        line-height: 3.1875rem;
+        position: relative;
+        display: inline-block;
+        font-weight: 900;
+        width: auto;
+        font-family: $GilroyFont;
+        font-weight: 900;
+        transform: scaleY(0);
+        opacity: 0;
+        transition-delay: 3s;
+        transition: all ease .5s;
+        &:before{
+          z-index: -1;
+          position: absolute;
+          content: '';
+          top: 35%;
+          left: -10%;
+          width: 120%;
+          height: 30%;
+          transform-origin: left;
+          transform: scaleX(0);
+          transition: all ease-in .3s;
+        }
+        &:nth-child(1):before{
+          background-color: #FFBBB8;
+        }
+        &:nth-child(2):before{
+          background-color: #FFE39A;
+        }
+        &:nth-child(3):before{
+          background-color: #BBBAD5;
+        }
+        &:nth-child(4):before{
+          background-color: #BDDE94;
+        }
+        &:nth-child(5):before{
+          background-color: #A4E2D1;
+        }
+        &:hover:before{
+          transform: scaleX(1);
+        }
+        & > a{
+          color: #1C1B20;
+        }
+      }
+    }
+    .contact{
+      transform: scaleY(0);
+      opacity: 0;
+      transition: all ease .4s;
+      transition-delay: .2s;
+      transform-origin: left;
+      .addresse{
+        font-size: 0.75rem;
+        line-height: 1.25rem;
+        font-family: $GilroyFont;
+        & > a{
+          color: #1C1B20;
+        }
+      }
+      .icon-tel{
+        display: flex;
+        align-items: center;
+        height: 1.5625rem;
+        svg{
+          margin-right: 0.625rem;
+        }
+        & > a{
+          color: #1C1B20;
+          font-size: 0.875rem;
+          font-family: $GilroyFont;
+          font-weight: 700;
+          line-height: normal;
+        }
+      }
+    }
+    .briefLink{
+      display: flex;
+      align-items: center;
+      margin-left: -4.875rem;
+      transform: scaleX(0);
+      opacity: 0;
+      transition: all ease .4s;
+      transition-delay: .4s;
+      transform-origin: left;
+      .arrow{
+        margin-right: 1.875rem;
+        margin-left: 0;
+        transition: all cubic-bezier(0.68, -0.55, 0.265, 1.55) .5s;
+      }
+      .block-us{
+        justify-content: center;
+        flex-direction: column;
+        color: #1C1B20;
+        display: flex;
+        .block-title{
+          font-size: 0.9375rem;
+          line-height: 1.5625rem;
+          font-style: italic;
+          font-family: $GaramondFont;
+        }
+        .next-page-title{
+          font-size: 1.875rem;
+          line-height: 3.25rem;
+          font-weight: 900;
+          font-family: $GilroyFont;
+        }
+      }
+      &:hover{
+        .arrow{
+          margin-right: 0.625rem;
+          margin-left: 12.5rem;
+        }
+      }
+    }
+  }
+}
+
+#list-lang-menu, #list-socials-menu{
+  transform: scaleX(0);
+  opacity: 0;
+  transition: all ease .4s;
+  transition-delay: .3s;
+  transform-origin: left;
+}
+
+.wrapper-menu{
+  z-index: 100;
+  .left-active{
+    width: 75% !important;
+  }
+}
+#menu{
+  .menu-cross{
+    left: 10px;
+    span{
+      &:nth-child(1){
+        width: 90% !important;
+        transform: rotate(-45deg);
+        top: 40% !important;
+      }
+      &:nth-child(2){
+        width: 0;
+        opacity: 0;
+      }
+      &:nth-child(3){
+        width: 90% !important;
+        transform: rotate(45deg);
+        bottom: 40% !important;
+      }
+    }
+  }
+}
+
+#menu-content{
+
+  @media screen and (max-width: $tableWidth) {
+    background-color: #fff;
+
+  }
+}
+#main-wrapper{
+  position: relative;
+  .main-color-menu{
+    transform: scaleX(0);
+    transform-origin: top;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    transition: all ease .3s;
+    z-index: 90;
+  }
+}
+.hide-block{
+  display: none !important;
+  opacity: 0;
+  visibility: hidden;
+}
+.hide-overflow{
+  overflow: hidden;
+}

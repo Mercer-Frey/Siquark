@@ -1,0 +1,157 @@
+.vision{
+  width: 100%;
+  height: auto;
+  padding: 0 3.875rem; 
+  box-sizing: border-box;
+  z-index: 5;
+  background-color: $homeGray;
+  @media screen and (max-width: $tableWidth) {
+    padding: 0 0 3.125rem; 
+  } 
+  .padding {
+    margin-top: 6.25rem;
+    @media screen and (max-width: $tableWidth) {
+      margin-bottom: 3rem;
+    }
+    h2{
+      opacity: 0;
+      margin-bottom: 6.25rem;
+      font-family: $GilroyFont !important;
+      @media screen and (max-width: $tableWidth) {
+        margin-bottom: 4rem;
+      }
+      .txt{
+        color: $colorHome;
+        line-height: 7.375rem;
+        font-size: 8.125rem;
+        font-weight: 900;
+        font-family: $GilroyFont;
+        @media screen and (max-width: $smDesktopWidth) {
+          font-size: 7rem;
+          line-height: 6rem;
+        }
+      }
+    }
+    .block-content{
+      .intro{
+        margin: 0;
+        padding: 0;
+        font-family: $GilroyFont; 
+        line-height: 3rem;
+        font-size: 2.3125rem;
+        font-weight: 900;
+        color: #000;
+        @media screen and (max-width: $smDesktopWidth) {
+          font-size: 1.7rem;
+          line-height: 2rem;
+        }
+        i{
+          font-family: $GaramondFont; 
+        }
+        .dot{
+          color: $colorHome;
+        }
+      }
+      p{
+        font-family: $mainFont; 
+        line-height: 1.875rem;
+        font-size: 1.125rem;
+        font-weight: 500;
+        margin-top: 2.5rem;
+        color: #606060;
+      }
+      & > a{
+        display: inline-block;
+        margin-top: 2.5rem;
+        color: #1C1B20;
+        font-family: $GaramondFont;
+        font-size: 1.5625rem;
+        font-weight: 500;
+        line-height: 2.0625rem;
+        font-style: italic;
+        position: relative;
+        &:before, &:after{
+          position: absolute;
+          content: '';
+          z-index: -1;
+          transition: transform .4s;
+        }
+        &:before{
+          top: 30%;
+          left: -10%;
+          width: 120%;
+          height: 40%;
+          background-color: #FFE39A;
+          transform-origin: right;
+          transform: scaleX(0);
+        }
+        &:after{
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 0.125rem;
+          background-color: #000;
+          transform-origin: left;
+          transform: scaleX(1);
+        }
+        &:hover:before{
+          transform: scaleX(1);
+          transform-origin: left;
+        }
+        &:hover:after{
+          transform: scaleX(0);
+          transform-origin: right;
+        }
+      }
+    }
+  }
+  .skills-container{
+    #skills{
+      opacity: 0;
+    }
+    .animated{
+      padding: 4.6875rem;
+      position: relative;
+      box-sizing: border-box;
+      transition: all ease-in .4s;
+      @media screen and (max-width: $smDesktopWidth) {
+        text-align: center;
+        padding: 3rem;
+      }
+      &:before{
+        position: absolute;
+        content:'';
+        left: 0;
+        top: 0;
+        background-color: #1C1B20;
+        z-index: -1;
+        width: 47vw;
+        height: 100%;
+        @media screen and (max-width: $smDesktopWidth) {
+          width: 100%;
+        }
+      }
+      h3{
+        font-size: 1.25rem;
+        line-height: 2.125rem;
+        font-family: $GilroyFont;
+        font-weight: 900;
+        color: #fff;
+      }
+      p{
+        color: #4C4A57;
+        font-family: $mainFont;
+        line-height: 1.6875rem;
+        font-size: 1rem;
+      }
+    }
+  }
+  .skills{
+    .skill-block{
+      width: 50%;
+      @media screen and (max-width: $phoneWidth) {
+        width: 100%;
+      }
+    }
+  }
+}

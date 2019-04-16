@@ -1,0 +1,19 @@
+.video-visuel{
+  width: 100%;
+  height: auto;
+  padding: 0;   
+  box-sizing: border-box;
+  z-index: 1;
+  background-color: $homeGray;
+  .video-container{
+    display: block; 
+    overflow: hidden;
+    img{
+      transform: scale(1.2);
+      display: block;
+      transform-origin: center;
+      width: 100%;
+      height: auto;
+    }
+  }
+}

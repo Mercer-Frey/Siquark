@@ -1,0 +1,882 @@
+.page-home {
+
+	&.loading .page {
+		@include transform(translateX(100vw));
+	}
+	.loader {
+		@include transform(translateX(-100vw));
+		@media (min-width: $small) {
+			@include transform(translateX(calc(-100vw + 40px)));
+		}
+		.color {
+			background-color:$colorHome!important;
+		}
+	}
+
+	.menuColor {background:$colorHome;}
+	.link:before{background:$colorHome;}
+	.page-color{
+		background:$pageBackground;
+		left:50%; height:250vh;
+		@media (min-width: $small) {
+			 height:100vh;
+		}
+	}
+
+	.dot{color:$colorHome;}
+
+	h2 {
+
+		.waves {
+
+			margin-bottom:30px;
+
+			svg {
+
+				width:50px;
+				height:10px;
+
+				@media (min-width: $vlarge) {
+					width:70px;
+					height:15px;
+				}
+
+				> * {
+					fill:none;
+					stroke:$fontColor;
+					stroke-width:5px;
+				}
+
+			}
+		}
+		.txt {
+
+			font-size:6rem;
+			line-height:0.9;
+			@media (min-width: $small) {
+				font-size:8rem;
+			}
+
+			@media (min-width: $large) {
+				font-size:10rem;
+			}
+
+			@media (min-width: $vlarge) {
+				font-size:13rem;
+			}
+
+			div {
+				overflow:hidden;
+				span {
+					display:inline-block;
+				}
+			}
+
+		}
+	}
+
+	p {
+
+		&.intro {
+
+			font-size:2.4rem;
+			line-height:1.2;
+			font-weight:900;
+			max-width:240px;
+
+			@media (min-width: $small) {
+				font-size:2.8rem;
+			}
+
+			@media (min-width: $large) {
+				font-size:3.2rem;
+			}
+
+			@media (min-width: $vlarge) {
+				font-size:3.8rem;
+			}
+
+			div {
+				overflow:hidden;
+				span {
+					display:inline-block;
+				}
+			}
+
+		}
+	}
+
+	.page > * {
+		position:relative;
+		z-index:10;
+	}
+
+	.page > .intro {
+
+		z-index:0!important;
+		pointer-events:none;
+		background:$colorHome;
+		overflow:hidden;
+		@media (min-width: $small) {
+			background:transparent;
+			overflow:visible;
+		}
+
+		.hello-wrapper {
+			position:absolute;
+			width:100%;
+
+		}
+	}
+
+	&.showHello {
+
+		section.hello {
+			& > *:not(.hello-scrolldown) {
+				@include transform(translateX(0%));
+			}
+			.hello-scrolldown {
+				opacity:1;
+				@include transform(rotate(-90deg) translateY(-60px));
+			}
+		}
+
+		header.header .scrolldown{
+			bottom:-100px;
+		}
+
+	}
+
+	section.hello {
+
+		position:relative;
+		z-index:2!important;
+
+		@media (min-width: $small) {
+			position:fixed;
+			left:0px;
+			right:0px;
+			height:100vh;
+		}
+
+		> .page-color {
+			@include transform(translateX(100%));
+			@include transition(transform $transitionDuration*2 $ease 50ms);
+		}
+
+		.padding {
+			height:100vh;
+			@include transform(translateX(50%));
+			@include transition(transform $transitionDuration*2 $ease 0ms);
+		}
+
+		.hello-scrolldown {
+
+			position:absolute;
+			z-index:9;
+			line-height:1;
+			opacity:0;
+			@include transform(rotate(-90deg) translateY(-60px) translateX(-100px));
+			pointer-events:none;
+			bottom:110px;
+			left:50%;
+			z-index:101!important;
+			@include transition(transform $transitionDuration*2 $ease 0ms, opacity 250ms linear 0ms);
+
+			@media (min-width: $small) {
+				bottom:90px;
+			}
+
+			> * {
+				display:inline-block;
+				vertical-align:middle;
+			}
+
+			> .txt {
+				font-weight:700;
+				font-size:1rem;
+				margin-left:10px;
+				color:white;
+				span {
+					display:inline-block;
+					@include transition(transform 400ms $ease 0ms);
+					@include transform(translateX(5px));
+				}
+			}
+
+			.arrow {
+				@include animation(bounce 800ms  $ease infinite alternate);
+				svg path {
+					fill:white;
+				}
+			}
+
+		}
+
+		h1 {
+
+			position:absolute;
+			top:50%;
+			left:50%;
+			@include transform(translate(-50%,-50%));
+			white-space:nowrap;
+			margin-bottom:0px!important;
+
+			@media (min-width: $medium) {
+				margin-top:0px;
+			}
+
+			@media (min-width: $large) {
+				font-size:16rem;
+
+			}
+
+			@media (min-width: $vlarge) {
+				font-size:22rem;
+			}
+
+			.dot {
+				@media (max-width: $medium - 1px) {
+					color:white;
+				}
+			}
+
+			svg {
+
+				width:200px;
+				height:160px;
+
+				@media (min-width: $small) {
+					width:350px;
+					height:280px;
+				}
+
+				@media (min-width: $vlarge) {
+					width:430px;
+					height:340px;
+				}
+
+				.line  {
+					fill:none;
+					stroke:$fontColor;
+					stroke-width:41px;
+				}
+				.dot  {
+					fill:$colorHome;
+				}
+			}
+
+		}
+
+	}
+
+	section.preambule {
+
+		position:relative;
+		z-index:1!important;
+
+		@media (min-width: $small) {
+			position:fixed;
+			@include display(flex);
+			@include align-items(center);
+			background:$colorHome;
+			width:100%;
+			height:100vh;
+		}
+
+		.block-title {
+			@include transition(transform $transitionDuration* 2 $ease 0ms, opacity $transitionDuration linear 450ms);
+		}
+
+		.padding {
+			@media (max-width: $small - 1) {
+				padding-top:0px!important;
+			}
+		}
+
+		p {
+			font-size:1.8rem;
+			line-height:1.2;
+			color:white;
+			font-family:$Gilroy;
+			font-weight:700;
+			max-width:200px;
+			@include transition(transform $transitionDuration* 2 $ease 150ms, opacity $transitionDuration linear 600ms);
+
+			@media (min-width: $small) {
+				max-width:55%;
+				font-size:2.4rem;
+			}
+
+			@media (min-width: $medium) {
+				max-width:500px;
+			}
+
+			@media (min-width: $vlarge) {
+				font-size:3.2rem;
+				max-width:700px;
+			}
+
+			br {
+				display:none;
+				@media (min-width: $small) {
+					display:block;
+				}
+			}
+
+			div {
+				overflow:hidden;
+				span {
+					display:inline-block;
+				}
+			}
+
+			strong {
+				display:inline;
+				color:$fontColor;
+				font-weight:700;
+			}
+		}
+
+	}
+
+	.video-container {
+
+		background:$pageBackground;
+		@include transform(translate3D(0,0,0));
+
+		@media (min-width: $small) {
+			margin-top:200vh;
+		}
+
+		img {
+			display:block;
+			@media (max-width: $small - 1px) {
+				@include transform(translateY(0%)!important);
+			}
+		}
+	}
+
+	section.vision {
+
+		background:$pageBackground;
+
+		h2 {
+
+			.waves svg > * {stroke:$colorHome;}
+
+			color:$colorHome;
+			margin-bottom:40px;
+
+			@media (min-width: $small) {
+				margin-bottom:60px;
+			}
+
+			@media (min-width: $large) {
+				margin-bottom:100px;
+			}
+		}
+
+		.block-content {
+
+			@media (min-width: $medium) {
+				float:left;
+				width:45%;
+				padding-right:80px;
+			}
+
+			@media (min-width: $large) {
+				width:40%;
+				padding-right:12%;
+			}
+
+			p.intro {
+				max-width:275px;
+				@media (min-width: $large) {
+					max-width:100%;
+				}
+			}
+
+		}
+
+		.skills-container {
+
+			padding:60px 40px;
+			background:$fontColor;
+			color:white;
+			margin-top:60px;
+			margin-right:- 40px;
+			margin-left:- 40px;
+			position:relative;
+
+			@media (max-width: $small - 1px) {
+				@include transform(translate(0px, 0px)!important);
+			}
+
+			@media (min-width: $mobile) {
+				padding:60px 15vw;
+				margin-right:-15vw;
+				margin-left:-15vw;
+			}
+
+			@media (min-width: $small) {
+				margin-top:60px;
+			}
+
+			@media (min-width: $medium) {
+				margin-left:45%;
+				padding:60px;
+			}
+
+			@media (min-width: $large) {
+				margin-left:40%;
+				padding:$borderSizeLarge * 1.5;
+				margin-right:- $borderSizeLarge * 3;
+			}
+
+			.row > * {
+
+				&:nth-child(n+2) {
+					margin-top:40px;
+					@media (min-width: $mobile) {
+						margin-top:0px;
+					}
+				}
+
+				&:nth-child(n+3) {
+					@media (min-width: $mobile) {
+						margin-top:50px;
+					}
+				}
+			}
+
+			h3 {
+				margin-bottom:20px;
+				font-size:1.6rem;
+				@media (min-width: $vlarge) {
+					font-size:2rem;
+					margin-bottom:30px;
+				}
+				.waves svg {
+
+					width:20px;
+					height:4px;
+					margin-bottom:12px;
+
+					@media (min-width: $vlarge) {
+						width:25px;
+						height:5px;
+					}
+
+					> * {
+						fill:none;
+						stroke:white;
+						stroke-width:3px;
+					}
+				}
+			}
+
+			p {
+				color:lighten($fontColor, 20%);
+				font-size:1.2rem;
+				@media (min-width: $small) {
+					font-size:1.6rem;
+				}
+			}
+
+			&.animated {
+
+				&:after {
+					content:'';
+					display:block;
+					position:absolute;
+					top:-10px; left:0px;
+					width:100%;
+					bottom:-10px;
+					background:$pageBackground;
+					@include transform(translate3D(0px,0px,0px))
+				}
+
+				.skills {
+					@include transform(translateX(-40px));
+				}
+
+				&.visible {
+					&:after {
+						width:0%;
+						@include transition(width 1200ms $ease 0ms);
+					}
+					.skills {
+						@include transform(translateX(0%));
+						@include transition(transform 1200ms $ease 0ms);
+					}
+				}
+			}
+
+		}
+
+	}
+
+	section.creativity {
+
+		background:$pageBackground;
+
+		.padding {
+			padding-top:0px;
+			@media (min-width: $small) {
+				padding-right:0;
+				padding-left:0px;
+			}
+		}
+
+
+		h2 {
+
+			margin-bottom:40px;
+
+			@media (min-width: $small) {
+				margin-bottom:60px;
+				margin-left:15vw;
+			}
+
+			@media (min-width: $large) {
+				margin-left:20%;
+				margin-bottom:80px;
+			}
+
+			@media (min-width: $vlarge) {
+				margin-bottom:120px;
+				margin-left:22%;
+			}
+
+			.dot {
+				color:$fontColor;
+			}
+		}
+
+		.block-content {
+
+			@media (max-width: $small - 1px) {
+				@include transform(translate(0px, 0px)!important);
+			}
+
+			@media (min-width: $small) {
+				max-width:250px;
+				position:absolute;
+				left:50%;
+			}
+
+			@media (min-width: $vlarge) {
+				max-width:350px;
+			}
+
+			p {
+				margin-top:0px;
+				margin-bottom:40px;
+
+				@media (min-width: $small) {
+					margin-bottom:50px;
+				}
+
+				&.intro {
+
+					@media (min-width: $small) {
+						position:absolute;
+						top:0px;
+						@include transform(translateY(-100%));
+
+						margin-top:-60px;
+					}
+
+					@media (min-width: $large) {
+						margin-top:-80px;
+					}
+
+					@media (min-width: $vlarge) {
+						margin-top:-120px;
+						max-width:350px;
+					}
+
+				}
+			}
+			.link {
+				margin-top:0px;
+			}
+		}
+
+		.project-container {
+
+			margin-top:60px;
+
+			@media (min-width: $small) {
+				width:50%;
+				padding-right:60px;
+			}
+
+			@media (min-width: $large) {
+				padding-right:5%;
+			}
+
+			.project-infos {
+
+				text-align:right;
+				padding-top:25px;
+
+				.project-name {
+					font-weight:900;
+					font-size:1.1rem;
+				}
+
+				.project-cat, .project-year {
+					font-family:$Baskerville;
+					font-style:italic;
+					font-size:1.1rem;
+					color:#babcc1;
+				}
+
+				.project-year:before {
+					content:'-';
+					margin:0 5px;
+				}
+
+				.link {
+					margin-top:10px;
+					@media (min-width: $vlarge) {
+						margin-top:20px;
+					}
+				}
+
+			}
+
+			.project-visual {
+				display:block;
+				overflow:hidden;
+				max-height:300px;
+				margin-left:-40px;
+				margin-right:-40px;
+				position:relative;
+				background:#97ccf1;
+
+				img {
+					float:right;
+				}
+
+				@media (min-width: $mobile) {
+					margin-left:0px;
+					margin-right:0px;
+				}
+
+				@media (min-width: $large) {
+					height:500px;
+				}
+
+				@media (min-width: $vlarge) {
+					height:600px;
+				}
+			}
+
+
+			&.animated {
+
+				.project-visual{
+					&:after {
+						content:'';
+						display:block;
+						position:absolute;
+						top:-10px; left:-1px; right:-1px;
+						bottom:-10px;
+						background:$pageBackground;
+					}
+				}
+
+				.project-infos {
+					opacity:0;
+					@include transform(translateX(-40px));
+				}
+
+				&.visible {
+					.project-visual{
+						&:after {
+							@include transform(translateX(102%));
+							@include transition(transform 1200ms $ease 50ms);
+						}
+					}
+					.project-infos {
+						opacity:1;
+						@include transform(translateX(0%));
+						@include transition(transform 1200ms $ease 0ms, opacity 250ms linear 150ms);
+					}
+				}
+			}
+
+		}
+	}
+
+	section.ideas {
+
+		background:$pageBackground;
+
+		.padding{
+			padding-top:0px;
+			@media (min-width: $small) {
+				padding-right:0px;
+				padding-left:0px;
+			}
+		}
+
+		h2 {
+
+			position:relative;
+			z-index:10;
+			@media (min-width: $small) {
+				margin-left:15vw;
+			}
+
+			@media (min-width: $large) {
+				margin-left:20%;
+			}
+
+			@media (min-width: $vlarge) {
+				margin-left:22%;
+			}
+
+			.waves svg > * {stroke:$colorIdeas;}
+			color:$colorIdeas!important;
+			.dot {color:$colorIdeas!important;}
+		}
+
+		.link {
+			margin-top:20px;
+			&:before {
+				background:$colorIdeas;
+			}
+		}
+
+		.visuel-container {
+
+			position:relative;
+			z-index:0;
+			overflow:hidden;
+			margin-top:-20px;
+			margin-left:-40px;
+			margin-right:-40px;
+
+			@media (min-width: $mobile) {
+				margin-right:- 10vw;
+				margin-left:- 10vw;
+			}
+
+			@media (min-width: $small) {
+				margin-top:-30px;
+				margin-left:0px;
+				margin-right:0px;
+				height:260px;
+			}
+
+			@media (min-width: $large) {
+				height:330px;
+				margin-top:-40px;
+			}
+
+			@media (min-width: $vlarge) {
+				height:420px;
+				margin-top:-50px;
+			}
+
+			img{
+				@media (max-width: $small - 1px) {
+					@include transform(translateY(0%)!important);
+				}
+			}
+
+
+			&.animated {
+
+				@include transform(translateY(25%));
+				&:after {
+					content:'';
+					display:block;
+					position:absolute;
+					top:-1px; left:0; bottom:-1px;
+					width:100%;
+					background:$pageBackground;
+				}
+
+				&.visible {
+					@include transform(translateY(0%));
+					@include transition(transform 1200ms $ease 0ms);
+					&:after {
+						@include transform(translateY(102%));
+						@include transition(transform 1200ms $ease 0ms);
+					}
+				}
+			}
+
+
+
+		}
+
+		.block-content{
+
+			padding:40px 0px 0px;
+
+			@media (min-width: $small) {
+				padding:60px 15vw 0px;
+			}
+
+			@media (min-width: $large) {
+				padding:80px $borderSizeLarge * 3 0vh 20%;
+			}
+
+			@media (min-width: $vlarge) {
+				padding:120px $borderSizeLarge * 3 0vh 22%;
+			}
+
+			.inner {
+
+				@media (min-width: $medium) {
+					@include display(flex);
+					@include align-content(center);
+					@include justify-content (space-between);
+					margin-left:-30px;
+					margin-right:-30px;
+				}
+
+				@media (min-width: $large) {
+					margin-left:-50px;
+					margin-right:-50px;
+				}
+
+				.dot {
+					color:$colorIdeas;
+				}
+
+				p.intro {
+					@media (min-width: $medium) {
+						max-width:100%;
+					}
+				}
+
+				> * {
+
+					margin-bottom:20px;
+
+					@media (min-width: $medium) {
+						width:33.333%;
+						margin:0px;
+						padding:0 30px;
+					}
+
+					@media (min-width: $large) {
+						padding:0 50px;
+					}
+
+				}
+			}
+
+
+		}
+
+	}
+
+}

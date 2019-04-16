@@ -1,0 +1,117 @@
+.footer{
+  width: 100%;
+  height: auto;
+  padding: 0 3.875rem;  
+  margin-bottom: 3.875rem; 
+  box-sizing: border-box;
+  background-color: #fff;
+  z-index: 80;
+  @media screen and (max-width: $phoneWidth) {
+    margin: 0;
+  }
+  .footer-wrapper{
+    width: 100%;
+    padding: 5rem 0.625rem 0vh 20%;
+    @media screen and (max-width: $phoneWidth) {
+      padding: 2rem;
+    }
+    .padding{ 
+      display: flex;
+      align-items: center;
+      margin-left: -3.125rem;
+      margin-right: -3.125rem;
+      max-width: 100%; 
+      .briefLink{
+        display: flex;
+        align-items: center;
+        transition: all ease .4s;
+        transition-delay: .4s;
+        transform-origin: left;
+        width: 33.333%;
+        @media screen and (max-width: $smDesktopWidth) {
+          width: 50%;
+        }
+        @media screen and (max-width: $tableWidth) {
+          width: 100%;
+        }
+        .arrow{
+          margin-right: 1.875rem;
+          margin-left: 0;
+          transition: all cubic-bezier(0.68, -0.55, 0.265, 1.55) .5s;
+        }
+        .block-us{
+          justify-content: center;
+          flex-direction: column;
+          color: #1C1B20;
+          display: flex;
+          .block-title{
+            font-size: 0.9375rem;
+            line-height: 1.5625rem;
+            font-style: italic;
+            font-family: $GaramondFont;
+          }
+          .next-page-title{
+            font-size: 1.875rem;
+            line-height: 3.25rem;
+            font-weight: 900;
+            font-family: $GilroyFont;
+            @media screen and (max-width: $smDesktopWidth) {
+              font-size: 1.2rem;
+            }
+          }
+        }
+        &:hover{
+          .arrow{
+            margin-right: 0.625rem;
+            margin-left: 1.25rem;
+          }
+        }
+      }
+      .wrapper-contact{
+        display: flex;
+        justify-content: flex-end;
+        width: 33.333%;
+        @media screen and (max-width: $smDesktopWidth) {
+          width: 50%;
+        }
+        .contact{
+          transition: all ease .4s;
+          transition-delay: .2s;
+          transform-origin: left;
+          .addresse{
+            font-size: 0.75rem;
+            line-height: 1.25;
+            font-family: $GilroyFont;
+            & > a{
+              color: #1C1B20;
+            }
+          }
+          .icon-tel{
+            display: flex;
+            align-items: center;
+            height: 1.5625rem;
+            svg{
+              margin-right: 0.625rem;
+            }
+            & > a{
+              color: #1C1B20;
+              font-size: 0.875rem;
+              font-family: $GilroyFont;
+              font-weight: 700;
+              line-height: normal;
+            }
+          }
+        }
+      }
+      .credits{
+        display: flex;
+        justify-content: flex-end;
+        color: #747474;
+        font-family: $mainFont;
+        font-size: 0.75rem;
+        width: 33.333%;
+        line-height: 0.9375rem;
+      }
+    }
+  }
+}

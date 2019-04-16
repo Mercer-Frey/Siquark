@@ -1,0 +1,89 @@
+.hello{
+	box-sizing: border-box;
+	position: relative;
+	width: auto;
+	margin: 0;
+	padding: 0;
+	height: 175vh;
+	z-index: -1;
+	&:before{			
+		content: '';
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background-color: #fff;
+		z-index: -1;
+	}
+	.padding{
+		height: 80%;
+		position: relative;
+		#hello-h1{
+			font-family: $GilroyFont !important;
+		}
+	}
+	.padding > h1{
+		position: fixed;
+		display: block;
+		left: 50%;
+		top: 50%;
+		width: 24rem;
+		height: 16rem;
+		transform: translate(-50%, -50%);
+		transition: all .9s;
+		transition-delay: all .3s;
+		margin: 0;
+		.hello-part{
+			margin: 0;
+			padding: 0;
+			text-transform: uppercase;
+			font-family: $GilroyFont;
+			font-size: 8.5rem;
+			font-weight: 900;
+			line-height: 8rem;
+			color: #1C1B20;
+			display: flex;
+			user-select: none;
+			&:nth-child(1){
+				span{
+					opacity: 0;
+				}
+			}
+			&:nth-child(2){
+				margin-left: 6rem; 
+				span{
+					margin-right: -0.8rem;
+					color: #1C1B20;
+					opacity: 0;
+				}
+			}
+			span{
+				text-align: center;
+				display: block;
+				width: 5.8rem;
+				font-family: "Gilroy";
+			}
+		}
+		.dot{
+			position: relative;
+			margin-top: -2.8rem;
+			#dot{
+				transition-delay: all 1s;
+				background-color: $colorHome;
+				transition: all ease 2s;
+				transform: scale(0);
+				border-radius: 50%;
+				display: block;
+				margin-left: auto;
+				width: 2rem;
+				height: 2rem;
+			}
+		}
+	}
+	.page-color{
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background-color: $colorHome;
+		transition: all ease 1.2s;
+	}
+}

@@ -1,0 +1,36 @@
+// Fonts here
+@font-face{
+  font-family: "Gilroy";
+  src:  url("/assets/fonts/Gilroy-Regular.eot") format("embedded-opentype"),
+        url("/assets/fonts/Gilroy-Regular.ttf") format("truetype"),
+        url("/assets/fonts/Gilroy-Regular.woff") format("woff");    
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+}
+@font-face{
+  font-family: "Gilroy";
+  src:  url("/assets/fonts/Gilroy-ExtraBold.eot") format("embedded-opentype"),
+        url("/assets/fonts/Gilroy-ExtraBold.ttf") format("truetype"),
+        url("/assets/fonts/Gilroy-ExtraBold.woff") format("woff");    
+  font-weight: 800;
+  font-style: normal;
+  font-stretch: normal;
+}
+@font-face{
+  font-family: "Gilroy";
+  src:  url("/assets/fonts/Gilroy-Heavy.eot") format("embedded-opentype"),
+        url("/assets/fonts/Gilroy-Heavy.ttf") format("truetype"),
+        url("/assets/fonts/Gilroy-Heavy.woff") format("woff");    
+  font-weight: 900;
+  font-style: normal;
+  font-stretch: normal;
+}
+@font-face{
+  font-family: "GaramondBookCTT";
+  src:  url("/assets/fonts/GaramondBookCTT.ttf") format("truetype");  
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+}
+ 

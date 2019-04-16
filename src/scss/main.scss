@@ -1,0 +1,210 @@
+@import "utils/libs";
+@import "utils/vars";
+@import "utils/mixins";
+@import "utils/fonts";
+
+
+html {
+  line-height: $mainLineHeight;
+	font-size: $mainFontSize;
+	color: $mainFontColor;
+  height: 100%;
+  @media screen and (max-width: $desktopWidth) {
+		font-size: 16px;
+  }
+  @media screen and (max-width: $smDesktopWidth) {
+		font-size: 15px;
+  }
+  @media screen and (max-width: $tableWidth) {
+		font-size: 14px;
+  }
+  @media screen and (max-width: $phoneWidth) {
+		font-size: 12px;
+  }
+  @media screen and (max-width: $smPhoneWidth) {
+		font-size: 10px;
+  }
+}
+
+body {
+  font-family: $mainFont;
+	font-family: $mainFontSize;
+  font-weight: $mainFontWeight; 
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: gray scale;
+  height: 100%;
+  // overflow: hidden;
+  margin: 0;
+}
+body::-webkit-scrollbar, body::-moz-scrollbar, body::-ms-scrollbar, body::-o-scrollbar{
+  width: 5px;
+}  
+
+body::-webkit-scrollbar-track, body::-moz-scrollbar-track, body::-ms-scrollbar-track, body::-o-scrollbar-track{
+  background-color: $homeGray;
+} 
+
+body::-webkit-scrollbar-thumb, body::-moz-scrollbar-thumb, body::-ms-scrollbar-thumb, body::-o-scrollbar-thumb{
+  background-color: $colorHome;
+  outline: 1px solid slategrey;
+  border-radius: 5px ;
+} 
+
+body::-moz-scrollbar{
+  width: 5px;
+}  
+
+body::-moz-scrollbar-track{
+  background-color: $homeGray; 
+} 
+
+body::-moz-scrollbar-thumb{
+  background-color: $colorHome;
+  outline: 1px solid slategrey;
+  border-radius: 5px ;
+} 
+
+
+
+*, *:before, *:after { box-sizing: border-box; }
+
+h1, h2, h3, h4, h5, h6 { margin: 0; }
+
+a {
+	text-decoration: none;
+}
+
+ul, li {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+section, .section {
+  position: relative;
+  padding: 40px 0;
+  @media screen and (max-width: $desktopWidth) {
+    padding: 36px 0;
+  }
+  @media screen and (max-width: $desktopWidth) {
+    padding: 28px 0;
+  }
+  @media screen and (max-width: $desktopWidth) {
+    padding: 20px 0;
+  }
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0 auto;
+  transition: all ease-in-out.5s;
+}
+
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.invisible {
+  transition: opacity 0.5s ease;
+  opacity: 0.0;
+}
+
+.visible {
+  transition: opacity 0.5s ease;
+  opacity: 1.0;
+}
+
+
+/**
+ * Simple keyframes animation for the chevron on the first slide
+ */
+ @keyframes chevronAnimation {
+	0% {
+		transform: translate(0,0) scale(1.0,1.0);
+	}
+	50% {
+		transform: translate(0,5px) scale(0.8,0.8);
+	}
+	100% {
+		transform: translate(0,0) scale(1.0,1.0);
+	}
+}
+
+/**
+ * Responsiveness
+ */
+@media screen and (max-width: 1024px)
+{	
+	body
+	{
+		font-size: 18px;
+		line-height: 27px;
+	}
+}
+
+@media screen and (max-width: 800px)
+{	
+	h1 span
+	{
+		display: block;
+	}
+	
+	div.block
+	{
+		height: 85vh;
+		padding: 15vh 15vw 0 15vw;
+	}
+}
+
+@media screen and (max-width: 420px)
+{	
+	body
+	{
+		font-size: 12px;
+		line-height: 18px;
+	}
+}
+
+@media screen and (max-width: 360px)
+{	
+	h1
+	{
+		font-size: 3em;
+	}
+}
+
+.vanishIn, .puffIn {
+  animation-duration: 1.5s;
+}
+
+.container {
+  width: 100%;
+  flex: 0 0 auto;
+  position: relative;
+  max-width: $desktopWidth;
+  margin: 0 auto;
+  @media screen and (max-width: $smDesktopWidth) {
+    max-width: tableWidth;
+  }
+  @media screen and (max-width: $tableWidth) {
+    max-width: phoneWidth;
+  }
+  @media screen and (max-width: $phoneWidth) {
+    max-width: smPhoneWidth;
+  }
+}
+
+@import "modules/wrapper.scss";
+@import "modules/menu.scss";
+@import "modules/header.scss";
+@import "modules/s_hello.scss";
+@import "modules/s_preambule.scss";
+@import "modules/s_video-visuel.scss";
+@import "modules/s_digital.scss";
+@import "modules/s_creativity.scss";
+@import "modules/s_ideas.scss";
+@import "modules/footer.scss";

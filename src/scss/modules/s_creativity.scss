@@ -1,0 +1,181 @@
+.creativity{
+  width: 100%;
+  height: auto;
+  padding: 0 3.875rem 3.125rem 0;   
+  box-sizing: border-box;
+  z-index: 10;
+  background-color: $homeGray; 
+  @media screen and (max-width: $tableWidth) {
+    padding: 0 0 3.125rem; 
+  } 
+  .padding{
+    margin-top: 6.25rem;
+    @media screen and (max-width: $tableWidth) {
+      margin-top: 3rem;
+    }
+    h2{
+      margin-bottom: 8.125rem;
+      opacity: 0;
+      font-family: $GilroyFont !important;
+      @media screen and (max-width: $tableWidth) {
+        margin-bottom: 5rem;
+      }
+      .txt{
+        color: #1C1B20; 
+        line-height: 7.375rem;
+        font-size: 8.125rem;
+        font-weight: 900;
+        font-family: $GilroyFont;
+        @media screen and (max-width: $smDesktopWidth) {
+          font-size: 7rem;
+          line-height: 6rem;
+        }
+      }
+    }
+    .intro{
+      margin-top: 10.9375rem;
+      padding: 0;
+      font-family: $GilroyFont; 
+      line-height: 3rem;
+      font-size: 2.375rem;
+      font-weight: 900;
+      color: #000;
+      @media screen and (max-width: $smDesktopWidth) {
+        font-size: 1.7rem;
+        line-height: 2rem;
+      }
+      @media screen and (max-width: $tableWidth) {
+        margin-top: 0;
+      }
+      i{
+        font-family: $GaramondFont; 
+      }
+      .dot{
+        color: $colorHome;
+      }
+    }
+    .project-wrapper{
+      display: flex;
+      align-items: center;
+      @media screen and (max-width: $tableWidth){
+        flex-direction: column-reverse;
+      }
+      .project-container{
+        box-sizing: border-box;
+        @media screen and (max-width: $tableWidth) {
+          width: 100%;
+        }
+        #projectItem{
+          opacity: 0;
+        }
+        .project-item{
+          width: 41.66666666666666vw;
+          position: relative;
+          box-sizing: border-box;
+          @media screen and (max-width: $tableWidth) {
+            width: 100%;
+          }
+          .project-visual{
+            display: flex;
+            height: 18.75rem;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            img{
+              position: absolute;
+              left: 0;
+              top: 50%;
+              transform: translate(0, -50%);
+              width: 100%;
+              height: auto;
+            }
+          }
+          .project-infos{
+            text-align: right;
+            font-family: $mainFont;
+            font-size: 0.9375rem;
+            font-weight: 700;
+            line-height: 1.125rem;
+            margin-top: 1.25rem;
+            @media screen and (max-width: $tableWidth) {
+              margin-right: 10%;
+            }
+            .project-cat, .project-year{
+              font-family: $GaramondFont;
+              color: #ada6a6;
+            }
+          }
+        }
+      }  
+      .block-content{
+        margin-left: 5.9375rem;
+        width: 35.625rem;
+        position: relative;
+        @media screen and (max-width: $smDesktopWidth) {
+          margin-left: 1.5rem;
+        }
+        @media screen and (max-width: $tableWidth) {
+          width: 100%;
+          margin-bottom: 2rem;
+          margin-left: 0;
+          padding: 0 6rem;
+        }
+        @media screen and (max-width: $phoneWidth) {
+          padding: 0 1rem;
+        }
+        p{
+          font-family: $mainFont; 
+          line-height: 1.875rem;
+          font-size: 1.125rem;
+          padding: 0;
+          margin: 0;
+          font-weight: 500;
+          color: #606060;
+        }
+        & > a{
+          display: inline-block;
+          margin-top: 2.5rem;
+          color: #1C1B20;
+          font-family: $GaramondFont;
+          font-size: 1.5625rem;
+          font-weight: 500;
+          line-height: 2.0625rem;
+          font-style: italic;
+          position: relative;
+          &:before, &:after{
+            position: absolute;
+            content: '';
+            z-index: -1;
+            transition: transform .4s;
+          }
+          &:before{
+            top: 30%;
+            left: -10%;
+            width: 120%;
+            height: 40%;
+            background-color: #BBBAD5;
+            transform-origin: right;
+            transform: scaleX(0);
+          }
+          &:after{
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: #000;
+            transform-origin: left;
+            transform: scaleX(1);
+          }
+          &:hover:before{
+            transform: scaleX(1);
+            transform-origin: left;
+          }
+          &:hover:after{
+            transform: scaleX(0);
+            transform-origin: right;
+          }
+        }
+      }
+    }
+  }
+}

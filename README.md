@@ -1,4 +1,5 @@
-# siquark - landing page
+# Siquark
+Siquark - landing page
 
-# design - figma
-https://www.figma.com/file/SCeFHmGQDahnvT1dFr10zCkT/Untitled?node-id=0%3A1&redirected=1
+# Design 
+https://www.figma.com/file/SCeFHmGQDahnvT1dFr10zCkT/Untitled?node-id=0%3A1
