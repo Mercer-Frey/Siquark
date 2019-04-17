@@ -6,6 +6,12 @@ $(window).resize(function (){
 	$('.hello-scrolldown').css('left', $(window).width() / 2 -30);
 	$('.preambule').css('top', $(window).height() / 2);
 	$('.preambule').css('left', $(window).width() / 4);
+
+	if($(window).width() > 1025){
+		$('body').css('overflow', 'hidden');
+	}else if($(window).width() < 1025){
+		$('body').css('overflow', 'scroll');
+	}
 });
 
 $('.scrolltop').click(function(e) {

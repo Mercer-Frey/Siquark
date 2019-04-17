@@ -1,7 +1,7 @@
 .creativity{
   width: 100%;
   height: auto;
-  padding: 0 3.875rem 3.125rem 0;   
+  padding: 0 3.875rem; 
   box-sizing: border-box;
   z-index: 10;
   background-color: $homeGray; 
@@ -14,7 +14,7 @@
       margin-top: 3rem;
     }
     h2{
-      margin-bottom: 8.125rem;
+      margin-bottom: 8.125rem; 
       opacity: 0;
       font-family: $GilroyFont !important;
       @media screen and (max-width: $tableWidth) {
@@ -43,6 +43,7 @@
       @media screen and (max-width: $smDesktopWidth) {
         font-size: 1.7rem;
         line-height: 2rem;
+        margin-top: 0;
       }
       @media screen and (max-width: $tableWidth) {
         margin-top: 0;

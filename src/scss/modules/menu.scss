@@ -109,6 +109,12 @@
       transition: all ease .4s;
       transition-delay: .4s;
       transform-origin: left;
+      &:hover{
+        .arrow{
+          margin-right: 0.625rem;
+          margin-left: 1.25rem;
+        }
+      }  
       .arrow{
         margin-right: 1.875rem;
         margin-left: 0;
@@ -130,12 +136,6 @@
           line-height: 3.25rem;
           font-weight: 900;
           font-family: $GilroyFont;
-        }
-      }
-      &:hover{
-        .arrow{
-          margin-right: 0.625rem;
-          margin-left: 12.5rem;
         }
       }
     }
