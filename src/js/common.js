@@ -7,9 +7,9 @@ $(window).resize(function (){
 	$('.preambule').css('top', $(window).height() / 2);
 	$('.preambule').css('left', $(window).width() / 4);
 
-	if($(window).width() > 1025){
+	if($(window).width() > 768){
 		$('body').css('overflow', 'hidden');
-	}else if($(window).width() < 1025){
+	}else if($(window).width() <= 768){
 		$('body').css('overflow', 'scroll');
 	}
 });
